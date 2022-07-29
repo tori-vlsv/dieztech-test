@@ -1,0 +1,20 @@
+.slider {
+  .swiper-slide {
+    min-height: 8.75rem;
+    height: auto;
+  }
+  .slide {
+    height: 100%;
+    background-color: $light-gray;
+    padding: 2rem 1.875rem;
+    border-radius: 5px;
+    & img {
+      margin-bottom: 0.625rem;
+    }
+    & h3 {
+      font-weight: 300;
+      font-size: $text-base;
+      line-height: 24px;
+    }
+  }
+}

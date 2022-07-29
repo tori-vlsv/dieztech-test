@@ -1,0 +1,8 @@
+mixin webinar(link, image, alt, title, time, type)
+  a(href=""+link).webinar 
+    .webinar__content
+      img(src=""+image alt=""+alt)
+      h3= title 
+      span= time 
+    .webinar__type
+      span= type

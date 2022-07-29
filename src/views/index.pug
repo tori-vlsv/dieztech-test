@@ -1,0 +1,15 @@
+extends ./layouts/master.pug
+
+block title
+  title Test | Главная
+
+block basicSeo
+  meta(name='description' content='Index page')
+  meta(name='keywords' content='index, page')
+
+block content
+
+  main
+    section
+      include ./components/webinars.pug
+      include ./components/slider.pug

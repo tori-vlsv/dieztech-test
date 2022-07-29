@@ -1,0 +1,34 @@
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.125rem;
+  h2 {
+    font-size: $text-xl;
+    line-height: 3.5rem;
+    font-weight: 700;
+  }
+  &-bordered {
+    padding-bottom: 1.25rem;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 7.875rem;
+      height: 0.25rem;
+      background-color: $orange;
+      bottom: 0;
+    }
+  }
+}
+
+@media screen and(max-width: $responsive-mobile-width) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.875rem;
+    h2 {
+      margin-bottom: 1.25rem;
+    }
+  }
+}

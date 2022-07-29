@@ -1,0 +1,34 @@
+@import "reset-css/sass/reset";
+
+/*
+  Основные параметры
+*/
+@import "./base/dimensions";
+@import "./base/fonts";
+@import "./base/palette";
+@import "./base/typography";
+
+/*
+  Базовые стили
+*/
+@import "./base/global";
+
+/*
+  Миксины
+*/
+@import "./mixins/heading";
+@import "./mixins/webinar";
+@import "./mixins/slide";
+
+/*
+  Компоненты
+*/
+@import "./components/header";
+@import "./components/footer";
+@import "./components/button";
+
+/*
+  Секции
+*/
+@import "./sections/webinars";
+@import "./sections/slider";

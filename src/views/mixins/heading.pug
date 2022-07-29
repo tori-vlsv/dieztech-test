@@ -1,0 +1,8 @@
+mixin heading(title, bordered, path, link)
+  .heading 
+    if bordered
+      h2.heading-bordered= title 
+      if link
+        a(href=""+path).btn.btn-orange.btn-padding-xl= link
+    if !bordered
+      h2= title

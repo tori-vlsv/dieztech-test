@@ -1,0 +1,26 @@
+.webinars {
+  padding: 3.75rem 0 5.625rem;
+  background-color: $light-gray;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.875rem;
+  }
+}
+
+@media screen and(max-width: $responsive-tablet-width) {
+  .webinars {
+    &__wrapper {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+
+@media screen and(max-width: $responsive-mobile-width) {
+  .webinars {
+    &__wrapper {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+}

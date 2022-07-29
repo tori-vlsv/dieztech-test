@@ -1,0 +1,10 @@
+include ../mixins/heading.pug
+include ../mixins/webinar.pug
+.webinars
+  .wrapper 
+    +heading('Заголовок', true, "#", 'Смотреть все мероприятия')
+    .webinars__wrapper 
+      +webinar('#', '/assets/images/webinar.jpg', 'webinar', 'Вебинар "Построение бизнес-модели стартапа"', '2 и 4 сентября, 17:30-19:45', 'Вебинар')
+      +webinar('#', '/assets/images/webinar.jpg', 'webinar', 'Необходимые меры за 4 месяца до обязательной маркировки товаров легкой промышленности', '10 сентября, 11:00', 'Лекция')
+      +webinar('#', '/assets/images/webinar.jpg', 'webinar', 'Вебинар "Customer Development. Инструмент по проверке гипотез о своем клиенте"', '11 сентября, 17:30-19:45', 'Вебинар')
+      +webinar('#', '/assets/images/webinar.jpg', 'webinar', 'Выставка «Новые меры финансовой поддержки экспорта»', '10 сентября, 11:00', 'Выставка')

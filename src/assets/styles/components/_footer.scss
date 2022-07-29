@@ -1,0 +1,40 @@
+.footer {
+  padding: 23px 0 21px;
+  background-color: $gray;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      color: $white;
+      font-weight: 300;
+      line-height: 16px;
+      a {
+        color: $white;
+        will-change: color;
+        transition: color .3s;
+        &:hover {
+          color: $orange;
+        }
+        &:focus {
+          color: $black;
+        }
+      }
+    }
+  }
+  &__signature {
+    margin-right: 10px;
+  }
+}
+
+@media screen and(max-width: $responsive-tablet-width) {
+  .footer {
+    &__wrapper {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    &__signature {
+      margin-bottom: 10px;
+    }
+  }
+}

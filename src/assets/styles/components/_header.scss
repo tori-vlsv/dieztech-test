@@ -1,0 +1,110 @@
+.header {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+  z-index: 100;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0;
+  }
+  &__logo {
+    & img {
+      width: 3.4375rem;
+    }
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    nav {
+      display: flex;
+      justify-content: center;
+      a {
+        margin: 0 1rem;
+        color: $gray;
+        will-change: color;
+        transition: color .3s;
+        &:hover {
+          color: $orange;
+        }
+        &:focus {
+          color: $black;
+        }
+        &.active {
+          color: $orange;
+        }
+      }
+    }
+  }
+  &__btns {
+    margin-left: 8.125rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__burger {
+    display: none;
+    cursor: pointer;
+    svg {
+      width: 30px;
+      height: 30px;
+      path {
+        will-change: stroke, transform;
+        transition: stroke .3s, transform .3s;
+      }
+    }
+    &.active {
+      svg {
+        path {
+          stroke: $orange;
+          &:nth-child(1) {
+            opacity: 0;
+          }
+          &:nth-child(2) {
+            transform: rotate(45deg) translateX(3px) translateY(-5px);
+          }
+          &:nth-child(3) {
+            transform: rotate(-45deg) translateX(-11px) translateY(-1px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: $responsive-tablet-width) {
+  .header {
+    &__burger {
+      display: block;
+      z-index: 3;
+    }
+    &__menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: calc(100% - 2.5rem);
+      height: calc(100vh - 4.375rem);
+      padding: 2.1875rem 1.25rem;
+      background-color: $white;
+      z-index: 2;
+      flex-direction: column;
+      align-items: flex-start;
+      &.active {
+        display: flex;
+      }
+      nav {
+        flex-direction: column;
+        a {
+          font-size: 1.25rem;
+          margin: 0 0 1rem 0;
+        }
+      }
+    }
+    &__btns {
+      flex-direction: column;
+      margin-left: 0;
+    }
+  }
+}

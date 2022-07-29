@@ -1,0 +1,19 @@
+include ../mixins/heading.pug
+include ../mixins/slide.pug
+.slider
+  .wrapper
+    +heading('Заголовок', false, '')
+    .swiper 
+      .swiper-wrapper 
+        +slide('/assets/images/slide-icon1.svg', 'slide-icon', 'Бухгалтеры')
+        +slide('/assets/images/slide-icon2.svg', 'slide-icon', 'Репетиторы')
+        +slide('/assets/images/slide-icon3.svg', 'slide-icon', 'Программисты')
+        +slide('/assets/images/slide-icon4.svg', 'slide-icon', 'Няни<br> и сиделки')
+        +slide('/assets/images/slide-icon1.svg', 'slide-icon', 'Бухгалтеры')
+        +slide('/assets/images/slide-icon2.svg', 'slide-icon', 'Репетиторы')
+    .slider__navigation
+      .swiper-button-prev
+        <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.31102 11.9854L7.37202 10.9779L2.87201 6.70496L22.4301 6.70495L22.4301 5.28064L2.87201 5.28064L7.37202 1.00771L6.31102 0.000247414L1.36686e-06 5.99185L6.31102 11.9835L6.31102 11.9854Z" fill="#E04E39"/></svg>
+      .swiper-pagination
+      .swiper-button-next
+        <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.1188 0L15.0578 1.00746L19.5578 5.2804H-0.00012207V6.70471H19.5578L15.0578 10.9776L16.1188 11.9851L22.4298 5.9935L16.1188 0.00189894V0Z" fill="#E04E39"/></svg>
